@@ -43,12 +43,12 @@
 
 ## PRINT:
 
-<img src="https://aziende.global/img/portfolio/buzz_dashboard.png>
+<img src="https://aziende.global/img/portfolio/buzz_dashboard.png">
 
-<img src="https://aziende.global/img/portfolio/buzz_listado.png>
+<img src="https://aziende.global/img/portfolio/buzz_listado.png">
 
-<img src="https://aziende.global/img/portfolio/buzz_listado_filtro.png>
+<img src="https://aziende.global/img/portfolio/buzz_listado_filtro.png">
 
-<img src="https://aziende.global/img/portfolio/buzz_modal.png>
+<img src="https://aziende.global/img/portfolio/buzz_modal.png">
 
-<img src="https://aziende.global/img/portfolio/buzz_edit.png>
+<img src="https://aziende.global/img/portfolio/buzz_edit.png">
