@@ -4,6 +4,7 @@ namespace App\Http\Services;
 
 use App\Enums\Level;
 use App\Models\Ticket;
+use Illuminate\Support\Facades\Log;
 
 class TicketsService
 {
@@ -53,18 +54,28 @@ class TicketsService
 
     public function update($request, $id)
     {
-        $data = [
-            'name' => $request['name'],
-            'description' => trim($request['description']),
-            'level' => $request['level'],
-            'done' => $request['done'],
-        ];
-
-
+        Log::info('update');
+        Log::info($request);
         $ticket = Ticket::find($id);
 
         if ($ticket) {
-            $ticket->update($data);
+            Log::info($ticket);
+
+            if (isset($request['name'])) {
+                $ticket->name = $request['name'];
+            }
+
+            if (isset($request['description'])) {
+                $ticket->description = trim($request['description']);
+            }
+
+            if (isset($request['level'])) {
+                $ticket->level = $request['level'];
+            }
+
+            $ticket->done = $request['done'];
+
+            $ticket->save();
         }
 
         return $ticket;
@@ -146,7 +157,7 @@ class TicketsService
                 $tickets =   $tickets->where('done', 0);
             }
         }
-        if ($data['created']) { 
+        if ($data['created']) {
             $tickets =  $tickets->whereDate('created_at', $data['created']);
         }
         if ($data['created_from']) {
